@@ -57,3 +57,51 @@ if ( ! function_exists( 'emuzone_scripts' ) ) :
 	}
 endif;
 add_action( 'wp_enqueue_scripts', 'emuzone_scripts' );
+
+if ( ! function_exists( 'emuzone_widgets_init' ) ) :
+	function emuzone_widgets_init() {
+		register_sidebar(
+			array(
+				'name'          => __( 'Navbar', 'emuzone' ),
+				'id'            => 'navbar',
+				'before_widget' => '',
+				'after_widget'  => '',
+				'before_title'  => '',
+				'after_title'   => '',
+			)
+		);
+		register_sidebar(
+			array(
+				'name'          => __( 'Sidebar', 'emuzone' ),
+				'id'            => 'sidebar',
+				'before_widget' => '',
+				'after_widget'  => '',
+				'before_title'  => '<h2 class="widget-title">',
+				'after_title'   => '</h2>',
+			)
+		);
+		register_sidebar(
+			array(
+				'name'          => __( 'Footer', 'emuzone' ),
+				'id'            => 'footer',
+				'before_widget' => '',
+				'after_widget'  => '',
+				'before_title'  => '',
+				'after_title'   => '',
+			)
+		);
+	}
+endif;
+add_action( 'widgets_init', 'emuzone_widgets_init' );
+
+/**
+ * Template Tags
+ */
+require get_template_directory() . '/inc/template-tags.php';
+
+/**
+ * Remove WordPress update notifications
+ */
+add_filter( 'auto_core_update_send_email', '__return_false' );
+add_filter( 'auto_plugin_update_send_email', '__return_false' );
+add_filter( 'auto_theme_update_send_email', '__return_false' );
