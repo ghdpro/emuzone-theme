@@ -1,0 +1,35 @@
+@use 'sass:math';
+
+/* WordPress specific (and required) CSS */
+
+.aligncenter {
+  @extend .text-center;
+}
+
+.alignright {
+  @extend .text-end;
+}
+
+.alignleft {
+  @extend .text-start;
+}
+
+.wp-caption {
+  @extend .text-body;
+}
+
+.wp-caption-text {
+  @extend .text-muted;
+}
+
+.gallery-caption {
+  @extend .text-muted;
+}
+
+.bypostauthor {
+  display: block;
+}
+
+.bypostauthor .avatar {
+  border: $border-width solid $primary;
+}
