@@ -33,3 +33,53 @@
 .bypostauthor .avatar {
   border: $border-width solid $primary;
 }
+
+/* Source: https://make.wordpress.org/accessibility/handbook/markup/the-css-class-screen-reader-text/ */
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+
+  &:focus {
+    background-color: #eee;
+    clip: auto !important;
+    clip-path: none;
+    color: #444;
+    display: block;
+    font-size: 1em;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+  }
+}
+
+/* Forms */
+
+button {
+  @extend .btn;
+}
+
+input[type=text], input[type=search], input[type=url], input[type=tel], input[type=number], input[type=range],
+input[type=date], input[type=month], input[type=week], input[type=time], input[type=datetime], input[type=datetime-local],
+input[type=color], input[type=email], input[type=file], input[type=submit], select, textarea {
+  @extend .form-control;
+}
+
+input[type=submit] {
+  @extend .btn;
+  @extend .btn-outline-primary;
+  width: auto;
+}

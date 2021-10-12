@@ -94,6 +94,33 @@ if ( ! function_exists( 'emuzone_widgets_init' ) ) :
 endif;
 add_action( 'widgets_init', 'emuzone_widgets_init' );
 
+function year_shortcode () {
+	return date_i18n ('Y');
+}
+add_shortcode ('year', 'year_shortcode');
+
+/**
+ * NavWalker (for menu's)
+ */
+
+if ( ! function_exists( 'emuzone_register_navwalker' ) ) :
+	function emuzone_register_navwalker() {
+		require_once get_template_directory() . '/classes/class-wp-bootstrap-navwalker.php';
+	}
+endif;
+add_action( 'after_setup_theme', 'emuzone_register_navwalker' );
+
+function prefix_bs5_dropdown_data_attribute( $atts, $item, $args ) {
+	if ( is_a( $args->walker, 'WP_Bootstrap_Navwalker' ) ) {
+		if ( array_key_exists( 'data-toggle', $atts ) ) {
+			unset( $atts['data-toggle'] );
+			$atts['data-bs-toggle'] = 'dropdown';
+		}
+	}
+	return $atts;
+}
+add_filter( 'nav_menu_link_attributes', 'prefix_bs5_dropdown_data_attribute', 20, 3 );
+
 /**
  * Template Tags
  */

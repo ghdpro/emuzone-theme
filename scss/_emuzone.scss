@@ -2,7 +2,7 @@ body {
   background-color: #204050;
   color: #000000;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 11pt;
+  font-size: 1em;
 }
 
 a:link,
@@ -41,4 +41,23 @@ h2 {
 main {
   background: #FDF8F0;
   padding: 1em;
+}
+
+.copyright {
+  font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+  font-size: 0.75em;
+  color: #608090;
+  margin-bottom: 2em;
+}
+
+.copyright a:link,
+.copyright a:active,
+.copyright a:visited {
+  color: #608090;
+  text-decoration: underline;
+}
+
+.copyright a:hover {
+  color: #608090;
+  text-decoration: none;
 }
