@@ -3,7 +3,7 @@
 <main class="container">
 	<?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
 	<div class="row">
-		<div class="col-sm-9">
+		<div class="col-md-10 content">
 
 			<?php
 			endif;
@@ -31,7 +31,7 @@
 
 		</div>
 
-		<aside class="col-sm-3 sidebar">
+		<aside class="col-md-2 sidebar">
 
 			<?php dynamic_sidebar( 'sidebar' ); ?>
 

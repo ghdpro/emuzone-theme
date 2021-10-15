@@ -1,6 +1,6 @@
 <footer class="container-fluid">
 	<div class="container">
-        <div class="row copyright">
+        <div class="row copyright text-center">
 			<?php dynamic_sidebar( 'footer' ); ?>
         </div>
 	</div>

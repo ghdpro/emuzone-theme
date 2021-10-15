@@ -2,7 +2,7 @@ h1, h2, h3, h4, h5, h6 {
   background: rgb(237,232,224);
   background: linear-gradient(75deg, rgba(237,232,224,1) 0%, rgba(253,248,240,1) 35%);
   border-bottom: solid 1px #A6A194;
-  padding: 3px 5px;
+  padding: 3px 8px;
 }
 
 h1 {
@@ -15,23 +15,111 @@ h2 {
   margin-bottom: 0.8em;
 }
 
+div.logo {
+  border-left: solid 1px #000000;
+  border-right: solid 1px #000000;
+  border-top: solid 1px #000000;
+  margin-top: 1em;
+}
+
+@include media-breakpoint-down(xl) {
+  div.logo {
+    border: none;
+    max-width: 100%;
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+div.topbar {
+  border-left: solid 1px #000000;
+  border-right: solid 1px #000000;
+  padding: 0;
+}
+
+@include media-breakpoint-down(xl) {
+  div.topbar {
+    border: none;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
 nav.navbar {
   background: rgb(198,193,180);
   background: linear-gradient(180deg, rgba(198,193,180,1) 0%, rgba(134,129,120,1) 8%, rgba(168,163,154,1) 50%);
   border-top: solid 1px #666151;
   border-bottom: solid 1px #666151;
   font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
-  font-size: 0.9em;
+  font-size: 0.95em;
   padding: 0;
 }
 
 .nav-link {
   font-weight: bold;
+  padding: 0.25em 1em;
 }
 
-main {
+main.container {
+  border-left: solid 1px #000000;
+  border-right: solid 1px #000000;
+  border-bottom: solid 1px #000000;
+}
+
+@include media-breakpoint-down(xl) {
+  main.container {
+    border: none;
+    border-bottom: solid 1px #000000;
+    max-width: 100%;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+.content {
   background: #FDF8F0;
-  padding: 1em;
+  padding: 1.5em;
+}
+
+aside.sidebar {
+  background-color: #DFD6C8;
+  border-left: solid 1px #A6A194;
+  font-size: 0.95em;
+  padding: 0;
+}
+
+@include media-breakpoint-down(md) {
+  aside.sidebar {
+    border-top: solid 1px #A6A194;
+    border-left: none;
+  }
+}
+
+aside.sidebar .widget-title {
+  background: rgb(194,187,176);
+  background: linear-gradient(180deg, rgba(194,187,176,1) 0%, rgba(176,170,160,1) 8%, rgba(223,214,200,1) 92%);
+  border-bottom: solid 1px #A6A194;
+  color: #666151;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-align: center;
+  width: 100%;
+}
+
+aside.sidebar ul {
+  list-style-type: none;
+  color: #464131;
+  line-height: 1.4em;
+  margin: 0.5em 0.5em 1em 0.5em;
+  padding: 0;
+}
+
+aside.sidebar li:before {
+  content: '›';
+  font-weight: bold;
+  padding-right: 0.3em;
 }
 
 .copyright {
