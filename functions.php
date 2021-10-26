@@ -58,6 +58,7 @@ if ( ! function_exists( 'emuzone_scripts' ) ) :
 endif;
 add_action( 'wp_enqueue_scripts', 'emuzone_scripts' );
 
+require_once get_template_directory() . '/classes/class-fieldwidget.php';
 require_once get_template_directory() . '/classes/class-sharewidget.php';
 
 if ( ! function_exists( 'emuzone_widgets_init' ) ) :
@@ -92,7 +93,8 @@ if ( ! function_exists( 'emuzone_widgets_init' ) ) :
 				'after_title'   => '',
 			)
 		);
-		register_widget('ShareWidget');
+		register_widget( 'FieldWidget' );
+		register_widget( 'ShareWidget' );
 	}
 endif;
 add_action( 'widgets_init', 'emuzone_widgets_init' );
