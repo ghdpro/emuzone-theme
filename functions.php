@@ -58,6 +58,8 @@ if ( ! function_exists( 'emuzone_scripts' ) ) :
 endif;
 add_action( 'wp_enqueue_scripts', 'emuzone_scripts' );
 
+require_once get_template_directory() . '/classes/class-sharewidget.php';
+
 if ( ! function_exists( 'emuzone_widgets_init' ) ) :
 	function emuzone_widgets_init() {
 		register_sidebar(
@@ -90,6 +92,7 @@ if ( ! function_exists( 'emuzone_widgets_init' ) ) :
 				'after_title'   => '',
 			)
 		);
+		register_widget('ShareWidget');
 	}
 endif;
 add_action( 'widgets_init', 'emuzone_widgets_init' );
@@ -102,6 +105,20 @@ add_shortcode ('year', 'year_shortcode');
 /**
  * NavWalker (for menu's)
  */
+
+function emuzone_nav_menu_item_title( $title ) {
+	// For menu title, process shortcodes
+	return do_shortcode( html_entity_decode( $title ) );
+}
+add_filter( 'nav_menu_item_title', 'emuzone_nav_menu_item_title' );
+
+function emuzone_nav_menu_link_attributes ( $atts ) {
+	// For tooltip title, process shortcodes then strip them out
+	if (isset($atts['title']))
+		$atts['title'] = trim( strip_tags( do_shortcode( html_entity_decode( $atts['title'] ) ) ) );
+	return $atts;
+}
+add_filter( 'nav_menu_link_attributes', 'emuzone_nav_menu_link_attributes' );
 
 if ( ! function_exists( 'emuzone_register_navwalker' ) ) :
 	function emuzone_register_navwalker() {
@@ -124,7 +141,7 @@ add_filter( 'nav_menu_link_attributes', 'prefix_bs5_dropdown_data_attribute', 20
 /**
  * Template Tags
  */
-require get_template_directory() . '/inc/template-tags.php';
+require_once get_template_directory() . '/inc/template-tags.php';
 
 /**
  * Remove WordPress update notifications
