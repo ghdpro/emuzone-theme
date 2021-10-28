@@ -127,6 +127,37 @@ aside.sidebar p {
   margin: 0.5em 0.5em 1em 0.5em;
 }
 
+aside.sidebar p.social {
+  text-align: center;
+  margin: 1em 0;
+}
+
+aside.sidebar p.social a {
+  margin: 0.5em 0.3em;
+  padding: 0.3em 0;
+}
+
+aside.sidebar p.social i {
+  color: #FFFFFF;
+  width: 2em;
+}
+
+aside.sidebar p.social a:hover {
+  opacity: 0.7;
+}
+
+aside.sidebar p.social .facebook {
+  background-color: #3B5999;
+}
+
+aside.sidebar p.social .twitter {
+  background-color: #55ACEE;
+}
+
+aside.sidebar p.social .reddit {
+  background-color: #FF5700;
+}
+
 .copyright {
   font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
   font-size: 0.8em;
