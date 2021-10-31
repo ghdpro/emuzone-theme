@@ -29,11 +29,11 @@ if ( ! function_exists( 'emuzone_content_width' ) ) :
 endif;
 add_action( 'after_setup_theme', 'emuzone_content_width', 0 );
 
-if ( ! function_exists( 'emuzone_scripts' ) ) :
-	function emuzone_scripts() {
+if ( ! function_exists( 'emuzone_theme_scripts' ) ) :
+	function emuzone_theme_scripts() {
 		$theme = wp_get_theme();
 		wp_enqueue_style(
-			'emuzone',
+			'emuzone-theme',
 			get_stylesheet_uri(),
 			array(),
 			$theme->get( 'Version' )
@@ -56,13 +56,13 @@ if ( ! function_exists( 'emuzone_scripts' ) ) :
 		);
 	}
 endif;
-add_action( 'wp_enqueue_scripts', 'emuzone_scripts' );
+add_action( 'wp_enqueue_scripts', 'emuzone_theme_scripts' );
 
-require_once get_template_directory() . '/classes/class-fieldwidget.php';
-require_once get_template_directory() . '/classes/class-sharewidget.php';
+require_once( get_template_directory() . '/classes/class-fieldwidget.php' );
+require_once( get_template_directory() . '/classes/class-sharewidget.php');
 
-if ( ! function_exists( 'emuzone_widgets_init' ) ) :
-	function emuzone_widgets_init() {
+if ( ! function_exists( 'emuzone_theme_widgets_init' ) ) :
+	function emuzone_theme_widgets_init() {
 		register_sidebar(
 			array(
 				'name'          => __( 'Navbar', 'emuzone' ),
@@ -97,7 +97,7 @@ if ( ! function_exists( 'emuzone_widgets_init' ) ) :
 		register_widget( 'ShareWidget' );
 	}
 endif;
-add_action( 'widgets_init', 'emuzone_widgets_init' );
+add_action( 'widgets_init', 'emuzone_theme_widgets_init' );
 
 function year_shortcode () {
 	return date_i18n ('Y');
