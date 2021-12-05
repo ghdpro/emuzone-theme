@@ -54,7 +54,6 @@ main.container {
 @include media-breakpoint-down(xl) {
   main.container {
     border: none;
-    border-bottom: solid 1px #000000;
     max-width: 100%;
     width: 100%;
     margin: auto;
@@ -75,7 +74,6 @@ aside.sidebar {
 
 @include media-breakpoint-down(md) {
   aside.sidebar {
-    border-top: solid 1px #A6A194;
     border-left: none;
   }
 }

@@ -5,7 +5,7 @@
                 for ( $i = 1; $i <= 4; $i++ ) {
                     if ( is_active_sidebar( 'footer' . $i ) ) {
             ?>
-                <div class="col">
+                <div class="col-md">
                     <?php dynamic_sidebar( 'footer' . $i ); ?>
                 </div>
             <?php
