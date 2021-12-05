@@ -83,10 +83,22 @@ if ( ! function_exists( 'emuzone_theme_widgets_init' ) ) :
 				'after_title'   => '</h2>',
 			)
 		);
+		for ( $i = 1; $i <= 4; $i++ ) {
+			register_sidebar(
+				array(
+					'name'          => __( 'Footer' . $i, 'emuzone' ),
+					'id'            => 'footer' . $i,
+					'before_widget' => '',
+					'after_widget'  => '',
+					'before_title'  => '',
+					'after_title'   => '',
+				)
+			);
+		}
 		register_sidebar(
 			array(
-				'name'          => __( 'Footer', 'emuzone' ),
-				'id'            => 'footer',
+				'name'          => __( 'Copyright', 'emuzone' ),
+				'id'            => 'copyright',
 				'before_widget' => '',
 				'after_widget'  => '',
 				'before_title'  => '',

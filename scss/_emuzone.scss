@@ -15,13 +15,6 @@ h2 {
   margin-bottom: 0.8em;
 }
 
-div.logo {
-  border-left: solid 1px #000000;
-  border-right: solid 1px #000000;
-  border-top: solid 1px #000000;
-  margin-top: 1em;
-}
-
 @include media-breakpoint-down(xl) {
   div.logo {
     border: none;
@@ -31,15 +24,8 @@ div.logo {
   }
 }
 
-div.topbar {
-  border-left: solid 1px #000000;
-  border-right: solid 1px #000000;
-  padding: 0;
-}
-
 @include media-breakpoint-down(xl) {
   div.topbar {
-    border: none;
     max-width: 100%;
     width: 100%;
   }
@@ -52,7 +38,7 @@ nav.navbar {
   border-bottom: solid 1px #666151;
   font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
   font-size: 0.95em;
-  padding: 0;
+  padding: 0.2em;
 }
 
 .nav-link {
@@ -61,9 +47,8 @@ nav.navbar {
 }
 
 main.container {
-  border-left: solid 1px #000000;
-  border-right: solid 1px #000000;
-  border-bottom: solid 1px #000000;
+  border-left: solid 1px #A6A194;
+  border-right: solid 1px #A6A194;
 }
 
 @include media-breakpoint-down(xl) {
@@ -78,7 +63,7 @@ main.container {
 
 .content {
   background: #FDF8F0;
-  padding: 1.5em;
+  padding: 2em;
 }
 
 aside.sidebar {
@@ -111,7 +96,6 @@ aside.sidebar .widget-title {
 aside.sidebar ul {
   list-style-type: none;
   color: #464131;
-  line-height: 1.4em;
   margin: 0.5em 0.5em 1em 0.5em;
   padding: 0;
 }
@@ -158,21 +142,47 @@ aside.sidebar p.social .reddit {
   background-color: #FF5700;
 }
 
-.copyright {
-  font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
-  font-size: 0.8em;
-  color: #608090;
-  margin-bottom: 2em;
+footer.sitemap {
+  background-color: #C6C1B4;
+  border-top: solid 1px #A6A194;
+  font-size: 0.85em;
+  color: #666151;
+  padding: 1.5em;
 }
 
-.copyright a:link,
-.copyright a:active,
-.copyright a:visited {
-  color: #608090;
+footer.sitemap ul {
+  list-style-type: none;
+  color: #464131;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+footer.sitemap li:before {
+  content: '›';
+  font-weight: bold;
+  padding-right: 0.3em;
+}
+
+footer.copyright {
+  background-color: #A6A194;
+  font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+  font-size: 0.8em;
+  color: #666151;
+  padding: 1em;
+}
+
+footer.copyright p {
+  margin: 0;
+}
+
+footer.copyright a:link,
+footer.copyright a:active,
+footer.copyright a:visited {
+  color: #666151;
   text-decoration: underline;
 }
 
-.copyright a:hover {
-  color: #608090;
+footer.copyright a:hover {
+  color: #666151;
   text-decoration: none;
 }

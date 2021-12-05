@@ -1,0 +1,82 @@
+/* Section Block */
+
+.section {
+  margin: 1em 0;
+  width: 100%;
+}
+
+.section .emulator {
+  background-color: #EDE8E0;
+  border-bottom: solid 1px #A6A194;
+  color: #464131;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.section .emulator td:first-child {
+  font-size: 1.2em;
+  text-align: left;
+  padding: 0.3em 0.5em;
+}
+
+@include media-breakpoint-up(md) {
+  .section .emulator td:first-child {
+    width: 40%;
+  }
+}
+
+.section .emulator a {
+  font-weight: bold;
+}
+
+.section .emulator .fa {
+  font-size: 0.8em;
+  padding-left: 0.3em;
+}
+
+.section .description {
+  font-size: 0.9em;
+}
+
+.section .description td {
+  padding-left: 0.5em;
+  padding-bottom: 1em;
+}
+
+.section .legend {
+  color: #464131;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.section .legend td {
+  padding-left: 0.5em;
+  padding-bottom: 1em;
+}
+
+/* Voting Block */
+
+.voting {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  margin: 0;
+  padding: 0;
+}
+
+.v-star {
+  width: var(--size, 16px);
+  height: var(--size, 16px);
+  fill: #EDE8E0; /* Empty star color */
+  stroke: #464131; /* Star border color */
+
+  &.active {
+    fill: #FED94B; /* Full star color */
+  }
+}
+
+.v-rating {
+  font-weight: bold;
+  width: 2em;
+}
+
