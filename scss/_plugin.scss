@@ -56,6 +56,82 @@
 
 /* Voting Block */
 
+.votebox h2 {
+  background: rgb(194,187,176);
+  background: linear-gradient(180deg, rgba(194,187,176,1) 0%, rgba(176,170,160,1) 8%, rgba(223,214,200,1) 92%);
+  border-top: solid 1px #A6A194;
+  border-bottom: solid 1px #A6A194;
+  color: #464138;
+  font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-transform: lowercase;
+  text-align: center;
+  padding: 0.2em;
+  margin: 0;
+}
+
+.votebox div.votedisplay, .votebox div.vote {
+  background-color: #EDE8E0;
+  border-bottom: solid 1px #A6A194;
+  text-align: center;
+  white-space: nowrap;
+  height: 2.5em;
+}
+
+.votebox div.votedisplay {
+  padding: 0.5em;
+}
+
+.votebox div.vote {
+  padding: 0.25em;
+}
+
+.votebox .votedisplay {
+  border-left: solid 1px #A6A194;
+}
+
+.votebox .vote {
+  border-right: solid 1px #A6A194;
+}
+
+.votebox select#voteSelection {
+  background-color: #DFD6C8;
+  border: solid 1px #A6A194;
+  width: auto !important;
+  display: inline;
+  padding: 0.1em;
+  height: 1.75em;
+}
+
+.votebox input[type=submit] {
+  background-color: #DFD6C8;
+  border: solid 1px #A6A194;
+  color: #000000;
+  padding: 0 0.1em;
+  height: 1.75em;
+  margin-top: -0.2em;
+
+  &:hover, &:active {
+    background-color: #C6C1B4;
+    border: solid 1px #666151;
+  }
+}
+
+@media (max-width: 575px) {
+  .votebox h2:first-of-type, .votebox div.votedisplay {
+    border-right: solid 1px #A6A194;
+  }
+
+  .votebox div.votedisplay {
+    border-bottom: none;
+  }
+
+  .votebox h2:last-of-type, .votebox div.vote {
+    border-left: solid 1px #A6A194;
+  }
+}
+
 .voting {
   display: flex;
   justify-content: center;
@@ -79,4 +155,3 @@
   font-weight: bold;
   width: 2em;
 }
-
