@@ -110,7 +110,7 @@
   color: #000000;
   padding: 0 0.1em;
   height: 1.75em;
-  margin-top: -0.2em;
+  margin-top: -0.3em;
 
   &:hover, &:active {
     background-color: #C6C1B4;
@@ -154,4 +154,9 @@
 .v-rating {
   font-weight: bold;
   width: 2em;
+}
+
+.votebox .vote span {
+  display: block;
+  margin: 0.25em;
 }
