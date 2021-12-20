@@ -14,7 +14,7 @@
 </div>
 
 <nav class="navbar navbar-expand-md navbar-dark topbar">
-    <div class="container">
+    <div class="container-xxl">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
             <span class="navbar-toggler-icon"></span>
         </button>

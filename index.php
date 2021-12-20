@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="container">
+<main class="container-xxl">
 	<?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
 	<div class="row">
 		<div class="col-md-10 content">

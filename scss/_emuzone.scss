@@ -15,7 +15,7 @@ h2 {
   margin-bottom: 0.8em;
 }
 
-@include media-breakpoint-down(xl) {
+@include media-breakpoint-down(xxl) {
   div.logo {
     border: none;
     max-width: 100%;
@@ -24,7 +24,7 @@ h2 {
   }
 }
 
-@include media-breakpoint-down(xl) {
+@include media-breakpoint-down(xxl) {
   div.topbar {
     max-width: 100%;
     width: 100%;
@@ -51,7 +51,7 @@ main.container {
   border-right: solid 1px #A6A194;
 }
 
-@include media-breakpoint-down(xl) {
+@include media-breakpoint-down(xxl) {
   main.container {
     border: none;
     max-width: 100%;

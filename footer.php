@@ -1,5 +1,5 @@
 <footer class="container-fluid sitemap">
-    <div class="container">
+    <div class="container-xxl">
         <div class="row">
             <?php
                 for ( $i = 1; $i <= 4; $i++ ) {
@@ -17,7 +17,7 @@
 </footer>
 
 <footer class="container-fluid copyright">
-	<div class="container">
+	<div class="container-xxl">
         <div class="row text-center">
 			<?php dynamic_sidebar( 'copyright' ); ?>
         </div>
