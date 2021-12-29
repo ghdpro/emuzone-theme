@@ -118,7 +118,7 @@
   }
 }
 
-@media (max-width: 575px) {
+@include media-breakpoint-down(sm) {
   .votebox h2:first-of-type, .votebox div.votedisplay {
     border-right: solid 1px #A6A194;
   }
@@ -160,4 +160,73 @@
 .votebox .vote span {
   display: block;
   margin: 0.25em;
+}
+
+/* Downloads Block */
+
+.dl {
+  border: solid 1px #A6A194;
+  width: 100%;
+  margin: 0.8em 0;
+}
+
+.dl th {
+  display: none;
+  background: rgb(194,187,176);
+  background: linear-gradient(180deg, rgba(194,187,176,1) 0%, rgba(176,170,160,1) 8%, rgba(223,214,200,1) 92%);
+  border-top: solid 1px #A6A194;
+  border-bottom: solid 1px #A6A194;
+  color: #464138;
+  font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-transform: lowercase;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.dl tr {
+  background-color: #EDE8E0;
+
+  &:nth-child(odd) {
+    background-color: #FDF8F0;
+  }
+
+  &:hover {
+    background-color: #DDD8D0;
+  }
+}
+
+.dl td {
+  display: block;
+  padding: 0.2em 0.4em;
+
+  &:first-child {
+    font-size: 1em;
+    text-align: left;
+  }
+
+  &:before {
+    content: attr(data-th) ": ";
+    font-weight: bold;
+    display: inline-block;
+    width: 6em;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .dl td:before {
+    display: none;
+  }
+
+  .dl th, .dl td {
+    display: table-cell;
+    font-size: 0.9em;
+    text-align: center;
+  }
+
+  .dl th:first-child, .dl td:first-child {
+    width: 40%;
+  }
 }
