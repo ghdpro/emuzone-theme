@@ -37,7 +37,7 @@ class FieldWidget extends WP_Widget {
 
         // If above failed, try to get data from parent post/page
         $parent = wp_get_post_parent_id( $post );
-        if ( !empty($parent) ) {
+        if ( !empty( $parent ) ) {
             $data = get_field ( $field, $parent );
             if ( !empty( $data ) )
                 return $data;
@@ -48,7 +48,7 @@ class FieldWidget extends WP_Widget {
     }
 
 	/**
-     * Displays wiget output
+     * Displays widget output
      *
 	 * @param array $args
 	 * @param array $instance
