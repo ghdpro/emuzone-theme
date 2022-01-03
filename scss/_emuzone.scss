@@ -15,20 +15,15 @@ h2 {
   margin-bottom: 0.8em;
 }
 
-@include media-breakpoint-down(xxl) {
-  div.logo {
-    border: none;
-    max-width: 100%;
-    width: 100%;
-    margin-top: 0;
-  }
+div.logo {
+  background: rgb(228,217,200);
+  background: linear-gradient(0deg, rgba(228,217,200,1) 0%, rgba(250,248,245,1) 75%);
+  height: 80px;
 }
 
-@include media-breakpoint-down(xxl) {
-  div.topbar {
-    max-width: 100%;
-    width: 100%;
-  }
+div.logo img {
+  object-fit: contain;
+  height: 80px;
 }
 
 nav.navbar {
@@ -41,7 +36,7 @@ nav.navbar {
   padding: 0.2em;
 }
 
-.nav-link {
+nav.navbar .nav-link {
   font-weight: bold;
   padding: 0.25em 1em;
 }

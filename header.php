@@ -8,9 +8,9 @@
 <body <?php body_class(); ?>>
 
 <div class="container-fluid logo">
-    <a href="<?php echo esc_url( home_url() ); ?>">
-		<?php echo esc_html( get_bloginfo( 'name' ) ); ?>
-    </a>
+    <div class="container-xxl d-flex justify-content-center">
+        <a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>"><img src="<?php echo get_theme_file_uri( 'assets/emuzone-logo.png' ); ?>"></a>
+    </div>
 </div>
 
 <nav class="navbar navbar-expand-md navbar-dark topbar">
