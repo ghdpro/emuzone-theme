@@ -34,6 +34,76 @@
   border: $border-width solid $primary;
 }
 
+article.page:not(:first-of-type) {
+  margin-top: $spacer * 3;
+}
+
+article.post:not(:first-of-type) {
+  margin-top: $spacer * 3;
+}
+
+.updated:not(.published) {
+  display: none;
+}
+
+.nav-links, .pagination {
+  margin-top: $spacer * 3;
+}
+
+.entry-content {
+  @include clearfix;
+}
+
+.entry-footer > span:not(:last-of-type) {
+  padding-right: $spacer;
+}
+
+.comments-area {
+  margin: $spacer * 1.5 0;
+}
+
+.comments-title {
+  font-size: $h4-font-size;
+}
+
+.comment-navigation {
+  margin: $spacer;
+}
+
+.comment-navigation div:not(:last-of-type) {
+  padding-right: $spacer;
+}
+
+.comment {
+  list-style: none;
+}
+
+.comment .comment-body {
+  margin-top: $spacer * 1.5;
+}
+
+.comment .comment-author .avatar {
+  border-radius: $border-radius;
+  margin-right: math.div($spacer, 2);
+}
+
+.comment .comment-author .fn {
+  font-size: $font-size-base;
+}
+
+.comment .comment-author .says {
+  display: none;
+}
+
+.comment-metadata {
+  font-size: $font-size-sm;
+  margin-bottom: math.div($spacer, 2);
+}
+
+.comment-reply-title {
+  font-size: $h4-font-size;
+}
+
 /* Source: https://make.wordpress.org/accessibility/handbook/markup/the-css-class-screen-reader-text/ */
 
 .screen-reader-text {
@@ -64,6 +134,24 @@
     width: auto;
     z-index: 100000;
   }
+}
+
+/* Font Awesome */
+
+.more-link i.fas, .more-link i.far, .more-link i.fal, .more-link i.fad, .more-link i.fab {
+  padding-left: math.div($spacer, 2);
+}
+
+.entry-footer i.fas, .entry-footer i.far, .entry-footer i.fal, .entry-footer i.fad, .entry-footer i.fab {
+  padding-right: math.div($spacer, 2);
+}
+
+.nav-links i[class$="left"] {
+  padding-right: math.div($spacer, 2);
+}
+
+.nav-links i[class$="right"] {
+  padding-left: math.div($spacer, 2);
 }
 
 /* Forms */

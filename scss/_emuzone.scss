@@ -15,6 +15,24 @@ h2 {
   margin-bottom: 0.8em;
 }
 
+pre {
+  background-color: #EDE8E0;
+  border-left: solid 5px #C6C1B4;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-light;
+  color: #464138;
+  margin: $spacer ($spacer * 2);
+  padding: $spacer;
+}
+
+blockquote {
+  background-color: #EDE8E0;
+  border-left: solid 5px #C6C1B4;
+  font-style: italic;
+  margin: $spacer ($spacer * 2);
+  padding: $spacer;
+}
+
 div.logo {
   background: rgb(228,217,200);
   background: linear-gradient(0deg, rgba(228,217,200,1) 0%, rgba(250,248,245,1) 75%);
@@ -58,6 +76,23 @@ main.container {
 .content {
   background: #FDF8F0;
   padding: 2em;
+}
+
+.posted-on {
+  @extend .float-end;
+  font-weight: normal;
+  font-size: 0.65em;
+  color: #A6A194;
+  padding-top: 0.5em;
+}
+
+.more-link {
+  color: #A6A194;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 aside.sidebar {
@@ -141,6 +176,10 @@ footer.sitemap {
   font-size: 0.85em;
   color: #666151;
   padding: 1.5em;
+}
+
+footer.sitemap p {
+  margin: 0;
 }
 
 footer.sitemap ul {
