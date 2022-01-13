@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php
+    get_header();
+    $wc = 0;
+?>
 
 <main class="container-xxl">
 	<?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
@@ -15,6 +18,8 @@
 					the_post();
 
 					get_template_part( 'template-parts/content', get_post_format() );
+
+                    $wc += str_word_count_utf8( get_the_content() );
 
 				endwhile;
 

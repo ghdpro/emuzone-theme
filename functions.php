@@ -163,3 +163,8 @@ require_once get_template_directory() . '/inc/template-tags.php';
 add_filter( 'auto_core_update_send_email', '__return_false' );
 add_filter( 'auto_plugin_update_send_email', '__return_false' );
 add_filter( 'auto_theme_update_send_email', '__return_false' );
+
+function str_word_count_utf8($str) {
+	$words = preg_split( '/\W+/u', $str, -1, PREG_SPLIT_NO_EMPTY );
+	return count($words);
+}
