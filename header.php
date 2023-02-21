@@ -26,7 +26,7 @@
                 'container'       => 'div',
                 'container_class' => 'collapse navbar-collapse',
                 'container_id'    => 'navbarSupportedContent',
-                'menu_class'      => 'nav navbar-nav mr-auto',
+                'menu_class'      => 'nav navbar-nav me-auto',
                 'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
                 'walker'          => new WP_Bootstrap_Navwalker(),
             )
