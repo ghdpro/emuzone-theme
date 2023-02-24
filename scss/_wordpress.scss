@@ -103,6 +103,9 @@ article.post:not(:first-of-type) {
 .comment-reply-title {
   font-size: $h4-font-size;
 }
+.wp-block-group {
+  @extend .clearfix;
+}
 
 /* Source: https://make.wordpress.org/accessibility/handbook/markup/the-css-class-screen-reader-text/ */
 
