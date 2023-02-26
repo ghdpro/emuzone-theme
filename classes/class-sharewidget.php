@@ -17,7 +17,7 @@ class ShareWidget extends WP_Widget {
 	}
 
 	/**
-	 * Displays wiget output
+	 * Displays widget output
 	 *
 	 * @param array $args
 	 * @param array $instance
