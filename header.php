@@ -9,7 +9,7 @@
 
 <div class="container-fluid logo">
     <div class="container-xxl d-flex justify-content-center">
-        <a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>"><img src="<?php echo get_theme_file_uri( 'assets/emuzone-logo.png' ); ?>"></a>
+        <a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>"><img src="<?php echo get_theme_file_uri( 'assets/emuzone-logo-v3.png' ); ?>"></a>
     </div>
 </div>
 
