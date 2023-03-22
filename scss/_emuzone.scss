@@ -136,6 +136,10 @@ aside.sidebar ul {
   padding: 0;
 }
 
+aside.sidebar li > ul {
+  margin-top: 0;
+}
+
 aside.sidebar li:before {
   content: '›';
   font-weight: bold;
