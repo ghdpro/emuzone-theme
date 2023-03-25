@@ -107,6 +107,10 @@ article.post:not(:first-of-type) {
   @extend .clearfix;
 }
 
+.wp-block-image {
+  margin: $spacer 0;
+}
+
 /* Source: https://make.wordpress.org/accessibility/handbook/markup/the-css-class-screen-reader-text/ */
 
 .screen-reader-text {

@@ -1,7 +1,7 @@
 /* Section Block */
 
 .section {
-  margin: 1em 0;
+  margin: $spacer 0;
   width: 100%;
 }
 
@@ -55,6 +55,10 @@
 }
 
 /* Voting Block */
+
+.votebox {
+  margin: $spacer 0;
+}
 
 .votebox h2 {
   background: rgb(194,187,176);
@@ -167,7 +171,7 @@
 .dl {
   border: solid 1px #A6A194;
   width: 100%;
-  margin: 0.8em 0;
+  margin: $spacer 0;
 }
 
 .dl th {
