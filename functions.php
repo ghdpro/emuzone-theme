@@ -181,7 +181,7 @@ require_once get_template_directory() . '/blocks/block-playstore.php';
 function emuzone_theme_block_init() {
 	acf_register_block_type( array(
 		'name'            => 'emuzone-theme/playstore',
-		'title'           => 'EZ PlayStore',
+		'title'           => 'EZ Play Store',
 		'description'     => 'Google Play Store button',
 		'category'        => 'emuzone',
 		'icon'            => 'google',
