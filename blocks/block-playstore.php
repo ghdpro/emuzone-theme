@@ -29,7 +29,7 @@ function emuzone_playstore_callback( $block, $content = '', $is_preview = false,
 function emuzone_playstore_template( string $url ) {
 	?>
 	<div class="row justify-content-center">
-		<a href="<?php echo esc_url( $url ); ?>"><img src="<?php echo get_theme_file_uri( 'assets/google-play-badge.png' ); ?>" alt="Google Play Store button" width="180" height="70" class="d-block mx-auto"></a>
+		<a target="_blank" href="<?php echo esc_url( $url ); ?>"><img src="<?php echo get_theme_file_uri( 'assets/google-play-badge.png' ); ?>" alt="Google Play Store button" width="180" height="70" class="d-block mx-auto"></a>
 		<small class="text-muted text-center">Google Play and the Google Play logo are trademarks of Google LLC.</small>
 	</div>
 	<?php
