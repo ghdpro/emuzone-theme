@@ -170,3 +170,26 @@ function str_word_count_utf8($str) {
 	$words = preg_split( '/\W+/u', $str, -1, PREG_SPLIT_NO_EMPTY );
 	return count($words);
 }
+
+require_once get_template_directory() . '/blocks/block-playstore.php';
+
+/**
+ * Initialize/register Gutenberg blocks
+ *
+ * @return void
+ */
+function emuzone_theme_block_init() {
+	acf_register_block_type( array(
+		'name'            => 'emuzone-theme/playstore',
+		'title'           => 'EZ PlayStore',
+		'description'     => 'Google Play Store button',
+		'category'        => 'emuzone',
+		'icon'            => 'google',
+		'mode'            => 'edit',
+		'render_callback' => 'emuzone_playstore_callback',
+		'supports'        => array(
+			'align' => false,
+		)
+	) );
+}
+add_action( 'acf/init', 'emuzone_theme_block_init' );
