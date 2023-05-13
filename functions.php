@@ -91,8 +91,8 @@ if ( ! function_exists( 'emuzone_theme_widgets_init' ) ) :
 					'id'            => 'footer' . $i,
 					'before_widget' => '',
 					'after_widget'  => '',
-					'before_title'  => '',
-					'after_title'   => '',
+					'before_title'  => '<h2 class="sitemap-title">',
+					'after_title'   => '</h2>',
 				)
 			);
 		}

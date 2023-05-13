@@ -1,4 +1,4 @@
-h1, h2, h3, h4, h5, h6 {
+h1, h2 :not(.sitemap), h3, h4, h5, h6 {
   background: rgb(237,232,224);
   background: linear-gradient(75deg, rgba(237,232,224,1) 0%, rgba(253,248,240,1) 35%);
   border-bottom: solid 1px #A6A194;
@@ -192,6 +192,15 @@ footer.sitemap {
   font-size: 0.9em;
   color: #666151;
   padding: 2em 0.5em;
+}
+
+footer.sitemap h2 {
+  font-size: 0.9em;
+  color: #666151;
+  margin: 0;
+  &:not(:first-of-type) {
+    margin-top: 1rem;
+  }
 }
 
 footer.sitemap p {
