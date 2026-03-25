@@ -27,7 +27,10 @@ class ShareWidget extends WP_Widget {
         // So can't use get_permalink() here, because that doesn't work on category pages
         // $GET is for capturing search page query string
 		global $wp;
-		$permalink = home_url(add_query_arg(array( $_GET ), $wp->request . '/'));
+
+        $current_path = home_url( user_trailingslashit( $wp->request ) );
+        $permalink    = add_query_arg( wp_unslash( $_GET ), $current_path );
+
         // Get the title of the page, which is post/page title or blog title if not a singular post/page
 		if ( is_singular() )
 			$title = get_the_title();

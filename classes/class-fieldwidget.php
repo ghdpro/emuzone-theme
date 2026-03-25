@@ -82,7 +82,7 @@ class FieldWidget extends WP_Widget {
             $title = $title_field;
 
         ?>
-            <h2 class="widget-title"><?php echo $title; ?></h2>
+            <h2 class="widget-title"><?php echo esc_html( $title ); ?></h2>
             <?php echo $data; ?>
         <?php
 	}
@@ -106,11 +106,11 @@ class FieldWidget extends WP_Widget {
 		?>
 		<p>
 			<label for="<?php echo $this->get_field_name( 'title' ); ?>"><?php _e( 'Title Field:' ); ?></label>
-			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
 		</p>
 		<p>
 			<label for="<?php echo $this->get_field_name( 'field' ); ?>"><?php _e( 'Data Field:' ); ?></label>
-			<input class="widefat" id="<?php echo $this->get_field_id( 'field' ); ?>" name="<?php echo $this->get_field_name( 'field' ); ?>" type="text" value="<?php echo esc_attr( $field ); ?>" />
+			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'field' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'field' ) ); ?>" type="text" value="<?php echo esc_attr( $field ); ?>" />
 		</p>
 		<?php
 	}

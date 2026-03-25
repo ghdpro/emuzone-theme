@@ -1,5 +1,8 @@
 # JetBrains
 .idea
 
+# Node
+node_modules
+
 # Composer
 vendor

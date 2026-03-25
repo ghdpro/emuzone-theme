@@ -6,6 +6,7 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
 
 <div class="container-fluid logo">
     <div class="container-xxl d-flex justify-content-center">
