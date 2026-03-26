@@ -50,7 +50,7 @@ if ( ! function_exists( 'emuzone_theme_scripts' ) ) :
 		wp_enqueue_script(
 			'bootstrap',
 			get_template_directory_uri() . '/assets/js/bootstrap.min.js',
-			array(),
+			array( 'popperjs', ),
 			'5.1.3',
 			true
 		);
