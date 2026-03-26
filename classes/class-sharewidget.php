@@ -42,9 +42,9 @@ class ShareWidget extends WP_Widget {
 		?>
         <h2 class="widget-title">Share</h2>
 			<p class="social">
-				<a class="facebook" href="https://www.facebook.com/sharer.php?u=<?php echo $permalink; ?>" target="_blank" title="Post on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-				<a class="twitter" href="https://twitter.com/intent/tweet?url=<?php echo $permalink; ?>&amp;text=<?php echo $title; ?>" target="_blank" title="Post on X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
-				<a class="reddit" href="https://reddit.com/submit?url=<?php echo $permalink; ?>&amp;title=<?php echo $title; ?>" target="_blank" title="Post on Reddit"><i class="fa-brands fa-reddit-alien"></i></a>
+				<a class="facebook" href="https://www.facebook.com/sharer.php?u=<?php echo $permalink; ?>" target="_blank" rel="noopener" title="Post on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+				<a class="twitter" href="https://twitter.com/intent/tweet?url=<?php echo $permalink; ?>&amp;text=<?php echo $title; ?>" target="_blank" rel="noopener" title="Post on X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+				<a class="reddit" href="https://reddit.com/submit?url=<?php echo $permalink; ?>&amp;title=<?php echo $title; ?>" target="_blank" rel="noopener" title="Post on Reddit"><i class="fa-brands fa-reddit-alien"></i></a>
 			</p>
 		<?php
 	}
