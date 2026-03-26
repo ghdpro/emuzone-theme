@@ -51,7 +51,7 @@ if ( ! function_exists( 'emuzone_theme_scripts' ) ) :
 			'bootstrap',
 			get_template_directory_uri() . '/assets/js/bootstrap.min.js',
 			array( 'popperjs', ),
-			'5.1.3',
+			'5.3.8',
 			true
 		);
 	}
